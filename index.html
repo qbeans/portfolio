@@ -232,27 +232,29 @@
     /* ---------- Products strip ---------- */
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
     }
     .product {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
       display: flex;
-      gap: 16px;
-      align-items: flex-start;
+      flex-direction: column;
+      transition: box-shadow 0.18s, transform 0.18s, border-color 0.18s;
     }
-    .product .badge {
-      flex: none;
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      background: var(--blue-tint);
-      color: var(--blue-dark);
-      display: grid;
-      place-items: center;
-      font-weight: 800;
-      font-size: 1.1rem;
+    .product:hover { box-shadow: var(--shadow); transform: translateY(-2px); border-color: #d3ddee; }
+    .product-shot {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      display: block;
+      background: var(--bg-soft);
+      border-bottom: 1px solid var(--line);
     }
-    .product h3 { font-size: 1.05rem; margin: 2px 0 4px; }
+    .product-body { padding: 18px 20px 22px; }
+    .product h3 { font-size: 1.05rem; margin: 0 0 4px; }
     .product p { margin: 0; font-size: 0.95rem; color: var(--muted); }
 
     /* ---------- Résumé ---------- */
@@ -522,26 +524,26 @@
       <div class="products">
 
         <div class="product">
-          <div class="badge">AP</div>
-          <div>
+          <img class="product-shot zoomable" src="amazonphotos.png" alt="Amazon Photos web app screenshot" loading="lazy" />
+          <div class="product-body">
             <h3>Amazon Photos</h3>
             <p>Consumer photo backup, organization, and sharing at Amazon scale — as engineer, then EM of the Sharing team.</p>
           </div>
         </div>
 
         <div class="product">
-          <div class="badge">TT</div>
-          <div>
+          <img class="product-shot zoomable" src="taverntalk.png" alt="TavernTalk web app screenshot" loading="lazy" />
+          <div class="product-body">
             <h3>TavernTalk</h3>
             <p>AI-powered session recaps and campaign wiki for tabletop RPG groups.</p>
           </div>
         </div>
 
         <div class="product">
-          <div class="badge">GO</div>
-          <div>
-            <h3>Amazon Go Store</h3>
-            <p>Front-end web work for Amazon's checkout-free store initiative.</p>
+          <img class="product-shot zoomable" src="nordstrom.jpg" alt="Nordstrom custom advertising experience for clothing designers" loading="lazy" />
+          <div class="product-body">
+            <h3>Nordstrom</h3>
+            <p>A custom, high-profile digital advertising experience built to showcase clothing designers.</p>
           </div>
         </div>
 
