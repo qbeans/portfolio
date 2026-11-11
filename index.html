@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Suzanne Duket — Engineering Portfolio</title>
   <meta name="description" content="Suzanne Duket — Engineering Manager &amp; Front End Engineer. Projects, products, and résumé." />
+  <script>
+    // Google Analytics (GA4) page views. Only on the live GitHub Pages site, so local previews aren't counted.
+    if (location.hostname.endsWith('github.io')) {
+      const ga = document.createElement('script');
+      ga.async = true;
+      ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-21PME2TJ66';
+      document.head.appendChild(ga);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function gtag() { window.dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', 'G-21PME2TJ66');
+    }
+  </script>
   <style>
     :root {
       --blue: #1f6feb;
