@@ -317,6 +317,12 @@
     }
     .resume hr { border: none; border-top: 1px solid var(--line); margin: 30px 0; }
 
+    /* ---------- Side quests ---------- */
+    section.side { border-top: 1px solid var(--line); }
+    .side .products { grid-template-columns: repeat(auto-fill, minmax(260px, 340px)); }
+    .side .product-shot { object-position: top; }
+    .side .product-body a { display: inline-block; margin-top: 10px; font-size: 0.92rem; font-weight: 600; }
+
     /* ---------- Made recently / personality ---------- */
     .made-grid {
       display: grid;
@@ -742,6 +748,37 @@
           </div>
           <p class="r-where">Willamette University · Salem, OR</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SIDE QUESTS ============ -->
+  <section id="side" class="side">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Just for fun</p>
+        <h2>Side quests</h2>
+        <p>Small things I built for fun with Claude Code, mostly to see if I could.</p>
+      </div>
+
+      <div class="products">
+        <div class="product">
+          <img class="product-shot zoomable" src="side-antgame.jpg" alt="The Ant Game: a sugar cube to click and a Colony shop selling Worker Ants" loading="lazy" />
+          <div class="product-body">
+            <h3>The Ant Game</h3>
+            <p>An idle game that grows one anthill into the Andromeda Galaxy, with Ant Wizards, Bug Milk, and a lot of sugar.</p>
+            <a href="https://qbeans.github.io/the-ant-game/">Play ↗</a>
+          </div>
+        </div>
+        <div class="product">
+          <img class="product-shot zoomable" src="side-manyfutures.jpg" alt="Many Futures: a chart of net worth over time for four career paths" loading="lazy" />
+          <div class="product-body">
+            <h3>Many Futures</h3>
+            <p>A net worth planner that pits up to four career paths against strong, weak, and crashing markets.</p>
+            <a href="https://qbeans.github.io/many-futures/">Try it ↗</a>
+          </div>
+        </div>
+        <!-- Add more side quests — copy a .product block above -->
       </div>
     </div>
   </section>
